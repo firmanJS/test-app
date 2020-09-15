@@ -1,0 +1,42 @@
+version: '3'
+services:
+
+  #PHP & APACHE
+  evermos_test:
+    image: evermos_test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: evermos_test
+    depends_on:
+      - mysql
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8080:80"
+    networks:
+      - evermos_network
+
+  #MySQL Service
+  mysql:
+    image: mysql:5.7
+    container_name: mysql_db
+    restart: always
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+    volumes:
+      - evermos_vol_mysql:/var/lib/mysql/
+    networks:
+      - evermos_network
+
+#Docker Networks
+networks:
+  evermos_network:
+    driver: bridge
+
+#Volumes
+volumes:
+  evermos_vol_mysql:
+    driver: local
