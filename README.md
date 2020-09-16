@@ -21,11 +21,11 @@ import `Evermos.postman_collection.json` to your postman
 
 ## ANSWER SOLUTION
 
-- 01
+* 01
 1. create tenis player want to play add ball to container
 2. create container for ball
 3. insert ball to container 
 
-- 02
+* 02
 1. insert your order to basket before checkout
 2. checkout your order
