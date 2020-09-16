@@ -41,13 +41,7 @@ import `Evermos.postman_collection.json` to your postman
 1. insert your order to basket before checkout
 2. checkout your order
 - Available API
-  * `Player`
-  - `POST` `/api/v1/player` for adding new player example rahman
-  - `GET` `/api/v1/player` list player
-  - `GET` `/api/v1/player/:id_palyers` list player by id
-  - `PUT` `/api/v1/player/add-ball` add ball to container and verify if full
-  
-  * `Container`
+  * `Orders`
   - `POST` `/api/v1/orders` add item to basket
   - `GET` `/api/v1/orders/:order_code` list item by code transaction
   - `PUT` `/api/v1/orders/:id` update item in basket
