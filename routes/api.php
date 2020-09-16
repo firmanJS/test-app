@@ -14,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('v1/', 'API\v1\IndexController@index');
 
+Route::prefix('v1/players')->group(function() {
+    Route::post('/', 'API\v1\PlayerController@store');
+    Route::get('/', 'API\v1\PlayerController@index');
+    Route::get('/{id_players}', 'API\v1\PlayerController@index');
+    Route::post('/add-ball', 'API\v1\PlayerController@storeBall');
+});
+
+Route::prefix('v1/containers')->group(function() {
+    Route::post('/', 'API\v1\ContainerController@store');
+    Route::get('/', 'API\v1\ContainerController@index');
+    Route::get('/{id}', 'API\v1\ContainerController@index');
+});
+
 Route::prefix('v1/orders')->group(function() {
     Route::post('/', 'API\v1\OrderController@store');
     Route::get('/{order_code}', 'API\v1\OrderController@index');
