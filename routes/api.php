@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('v1/', 'API\v1\IndexController@index');
+Route::get('v1/puzzle', 'API\v1\PuzzleController@index');
 
 Route::prefix('v1/players')->group(function() {
     Route::post('/', 'API\v1\PlayerController@store');
