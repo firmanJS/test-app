@@ -47,3 +47,9 @@ import `Evermos.postman_collection.json` to your postman
   - `PUT` `/api/v1/orders/:id` update item in basket
   - `DELETE` `/api/v1/orders/:id` delete item in basket
   - `POST` `/api/v1/orders/checkout/:code_histories` update status in basket to complete transaction
+
+* puzzle
+1. solution A walk to north 3 steps 
+2. solution B walk to east 5 steps 
+3. solution C walk to south 1 step 
+  - `GET` `/api/v1/puzzle` 

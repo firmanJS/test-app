@@ -225,44 +225,6 @@
 					"response": []
 				},
 				{
-					"name": "checkout order",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"order_code\": \"ORDER-EVM-001\",\n    \"total\": \"1000000\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/orders/checkout/:code_histories",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"orders",
-								"checkout",
-								":code_histories"
-							],
-							"variable": [
-								{
-									"key": "code_histories",
-									"value": "ORDER-001"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "update order",
 					"request": {
 						"method": "PUT",
@@ -375,9 +337,80 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "checkout order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_code\": \"ORDER-EVM-001\",\n    \"total\": \"1000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/orders/checkout/:code_histories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"checkout",
+								":code_histories"
+							],
+							"variable": [
+								{
+									"key": "code_histories",
+									"value": "ORDER-001"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "puzzle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/puzzle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"puzzle"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
